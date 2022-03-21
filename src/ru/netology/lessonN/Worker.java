@@ -24,8 +24,9 @@ public class Worker {
         for (int i = 1; i < countWorks + 1; i++) {
             if (i == errorWork) {
                 errorCallback.onError("Error: Task " + errorWork + " is not done");
+            } else {
+                callback.onDone("Task " + i + " is done");
             }
-            callback.onDone("Task " + i + " is done");
         }
     }
 
